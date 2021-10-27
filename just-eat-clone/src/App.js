@@ -2,6 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+	
+	if (navigator.geolocation) {
+	      navigator.geolocation.watchPosition(function(position) {
+				
+	      console.log("Latitude is :", position.coords.latitude);
+	      console.log("Longitude is :", position.coords.longitude);
+		
+			
+	      });
+		  
+	    }	
+	
   return (
     <div className="App">
       <header className="App-header">
