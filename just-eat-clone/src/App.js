@@ -1,19 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Location from './Location';
 function App() {
-	
-	if (navigator.geolocation) {
-	      navigator.geolocation.watchPosition(function(position) {
-				
-	      console.log("Latitude is :", position.coords.latitude);
-	      console.log("Longitude is :", position.coords.longitude);
-		
-			
-	      });
-		  
-	    }	
-	
   return (
     <div className="App">
       <header className="App-header">
@@ -27,8 +15,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React 
         </a>
+		  
+        <Location/>
       </header>
     </div>
   );
