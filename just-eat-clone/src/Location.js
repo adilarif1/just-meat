@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import axios from "axios"; 
 
 
@@ -6,8 +6,8 @@ const Latlong = () => {
 
   const [lat, setLat] = useState(0);
   const [long, setLong] = useState(0);
-  const [data, setData] = useState("");
-  
+  const [data, setData] = useState([]);
+  //const [employees, setEmployees] = useState([])
   
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(function(position) {
@@ -28,20 +28,31 @@ const Latlong = () => {
       }
 
       useEffect(() => {
-        axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=location=-33.8670522%2C151.1957362&radius=1500&type=restaurant&keyword=cruise&key=YOUR-API').then((Response) => {
+        
+        //headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        axios.get('https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=55.8432785,-4.2625404&radius=2000&region=us&type=cafe,bakery&key=AIzaSyB9s9gNPrYkUP4F19Ik20iYJF6UEyes9hI',{
+          headers: {
+            
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET'
+          }
+         
+        }).then((response) => {
           
-          setData(Response.data);
+          console.log(JSON.stringify(response.data));
+          setData(JSON.stringify(response.data['results'][0]));
+          //setData(response);
         
-          });
-        
-          //return <h1>Location is: {lat}  +  {long}  </h1>
+
+        });
+          
+          
         
         }, []);
-      
-        return <h1>Location is: {data}</h1>
 
-
-
+       
+        return <h1>Location is: {data}  </h1>
+       
 }
 
 export default Latlong;
