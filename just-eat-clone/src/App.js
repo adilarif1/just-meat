@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Location from './Location';
+import Table from './Table';
 
 function App(){
   return (
@@ -18,7 +19,7 @@ function App(){
         >
           Learn React 
         </a>
-		  
+		  <Table/>
         <Location/>
       </header>
     </div>
