@@ -30,7 +30,7 @@ const Latlong = () => {
       useEffect(() => {
         
         //headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        axios.get('https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=55.8432785,-4.2625404&radius=2000&region=us&type=cafe,bakery&key=AIzaSyB9s9gNPrYkUP4F19Ik20iYJF6UEyes9hI',{
+        axios.get('https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=55.8432785,-4.2625404&radius=2000&region=us&type=cafe,bakery&key=YOUR_KEY',{
           headers: {
             
             'Access-Control-Allow-Origin': '*',
