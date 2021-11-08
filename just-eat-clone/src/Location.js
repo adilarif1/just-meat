@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Latlong = () => {
   const url = 'https://jsonplaceholder.typicode.com/users';
-  const URL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=55.8432785,-4.2625404&radius=2000&region=us&type=cafe,bakery&key=YOUR_KEY'
+  const URL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=55.8432785,-4.2625404&radius=2000&region=us&type=cafe,bakery&key=AIzaSyB9s9gNPrYkUP4F19Ik20iYJF6UEyes9hI'
   //const [lat, setLat] = useState(0);
   //const [long, setLong] = useState(0);
   const [data, setData] = useState([]);
@@ -24,10 +24,9 @@ const getData = async () => {
     //console.log(data)
     console.log(response.data.results)
     setData(response.data.results)
-    
+
 
 }
-
 
 
 
@@ -50,4 +49,4 @@ const getData = async () => {
 
 
 
-export default Latlong;
+//export default Latlong;
