@@ -4,30 +4,52 @@ import axios from "axios";
 
 const Latlong = () => {
   const url = 'https://jsonplaceholder.typicode.com/users';
-  const URL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=55.8432785,-4.2625404&radius=2000&region=us&type=cafe,bakery&key=AIzaSyB9s9gNPrYkUP4F19Ik20iYJF6UEyes9hI'
+
+  const URL = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=55.8432785,-4.2625404&radius=2000&region=us&type=cafe,bakery&key=Your_key'
+
   //const [lat, setLat] = useState(0);
   //const [long, setLong] = useState(0);
   const [data, setData] = useState([]);
   const arrayData = [];
-
-  
    
   useEffect(() => {
     getData()
     
 }, [])
 
+
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(function(position) {
+              
+          // Declare a new state variable, which we'll call "count"
+        //setLat(position.coords.latitude)
+        //setLong(position.coords.longitude)
+        //count = position.coords.latitude;
+        console.log("Latitude is :", position.coords.latitude);
+        console.log("Longitude is :", position.coords.longitude);
+       
+        //return <h1>Location is: {lat}  +  {long}</h1>
+
+     
+          
+        });
+        
+      }
+
 const getData = async () => {
 
-    const response = await axios.get(URL)
+    const response = await axios.get(URL,{headers: {
+            
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET'
+          }})
     //setData(response.data)
     //console.log(data)
-    console.log(response.data.results)
+    console.log(response.data)
     setData(response.data.results)
-
+    
 
 }
-
 
 
 
@@ -46,7 +68,5 @@ const getData = async () => {
 
   
 
+export default Latlong;
 
-
-
-//export default Latlong;
