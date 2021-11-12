@@ -8,14 +8,14 @@ import './App.css';
 import Login from './Login/Login';
 import Dashboard from './Dashboard/Dashboard';
 import Preferences from './Preferences/Preferences';
-
+import useToken from './useToken';
 
 
 function App(){
-  const [token, setToken] = useState();
-  
+  //const [token, setToken] = useState();
+ const { token, setToken } = useToken();
 
-   if(!token) {
+  if(!token) {
     return <Login setToken={setToken} />
   }
 

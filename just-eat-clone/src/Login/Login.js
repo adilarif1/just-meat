@@ -16,7 +16,7 @@ async function loginUser(credentials) {
 export default function Login({ setToken }) {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-
+//console.log(username);
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
