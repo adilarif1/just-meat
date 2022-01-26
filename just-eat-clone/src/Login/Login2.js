@@ -55,9 +55,9 @@ const getData = async () => {
 
    return( 
    <div>
-   {data.map((key, index)=>(<li key={index}>{index}{key.business_status}{key.formatted_address}{key.user_ratings_total}{key.rating}</li>))}
+   {data.map((key, index)=>(<p><img src="https://www.google.com/search?q=butcher&sxsrf=AOaemvKB8NJDOpAOYP6xFPQYqkAnGIv0jA:1635978626469&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi5zo-nn_3zAhWaAWMBHWYdAhgQ_AUoAnoECAIQBA#imgrc=s4QU5XsTjKFR0M" width="100" height="100" alt="Logo" />{index}{key.business_status}{key.formatted_address}{key.user_ratings_total}{key.rating}</p>))}
    </div>
-   /*<img src="https://www.google.com/search?q=butcher&sxsrf=AOaemvKB8NJDOpAOYP6xFPQYqkAnGIv0jA:1635978626469&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi5zo-nn_3zAhWaAWMBHWYdAhgQ_AUoAnoECAIQBA#imgrc=s4QU5XsTjKFR0M" width="100" height="100" alt="Logo" />*/
+   
    
    );
    

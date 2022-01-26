@@ -1,0 +1,13 @@
+
+
+
+.then(response => response.json()).then(data =>{ setData(data)})
+
+
+   return data.map(({ key }) => {
+            return (
+                <tr>
+                    <td>{key.formatted_address}</td>
+                </tr>
+            )
+        })

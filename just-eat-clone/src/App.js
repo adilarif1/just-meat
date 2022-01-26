@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
-//import Location from './Location';
+import Location from './Location';
 //import Table from './Table';
-//import Landing from './Landing';
+import Landing from './Landing';
 import Login from './Login/Login';
 import Dashboard from './Dashboard/Dashboard';
 import Preferences from './Preferences/Preferences';
 import useToken from './useToken';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App(){
   //const [token, setToken] = useState();
@@ -21,6 +21,7 @@ function App(){
 
   return (
    <div className="wrapper">
+	 {/* 
       <h1>Application</h1>
       <BrowserRouter>
         <Switch>
@@ -31,7 +32,13 @@ function App(){
             <Preferences />
           </Route>
         </Switch>
-      </BrowserRouter>
+   </BrowserRouter>*/}
+	  <BrowserRouter>
+                    <div>
+                    <Route path="/landing"  component={Landing} exact />
+                    <Route path="/location" component={Location}/>
+                    </div>
+                </BrowserRouter>
     </div>
   );
 }
