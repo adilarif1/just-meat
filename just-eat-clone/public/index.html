@@ -31,7 +31,7 @@
     
     li{
       
-      width: 80%;
+      width: 60%;
       height: 150px;
       margin: 10px 0;
      
@@ -43,7 +43,8 @@
     border-radius: 8px;
 
     }
-    
+    img{margin-top: 15px;}
+   ul, li{list-style-type: none;}
     .hero {
       /* Sizing */
       width: 100vw;
@@ -70,13 +71,35 @@
   .box{
 
     opacity: 0.5;
+    
+  }
 
+  .cat{
+    width: 20%;
+    height:150px;
+    background-color: lightgray;
+    float: left;
   }
   
+  .input{ height: 70px; width: 60%;}
+
   </style>
 
   </head>
+  <header></header>
   <body>
+    <div class="cat">
+      <img src="../src/beef.jpeg" width="20%" height="150px" alt="image" />
+    </div><div class="cat">
+      <img src="../src/lamb.jpeg" width="20%" height="150px" alt="image" />
+    </div><div class="cat">
+      <img src="../src/chicken.jpeg" width="20%" height="150px" alt="image" />
+    </div><div class="cat">
+      <img src="..src/turkey.jpg" width="20%" height="150px" alt="image" />
+    </div><div class="cat">
+      <img src="..src/fish.jpeg" width="20%" height="150px" alt="image" />
+    </div>
+    <input class="input is-rounded" type="text" placeholder="Search for a butcher near you">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -90,4 +113,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
 </html>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from "axios"; 
-
+import ReactDOM from 'react';
 
 const Latlong = () => {
   const url = 'https://jsonplaceholder.typicode.com/users';
@@ -54,10 +54,16 @@ const getData = async () => {
 
 
    return( 
+
+    
    <div>
-   {data.map((key, index)=>(<li key={index}>{index}{key.business_status}{key.formatted_address}{key.user_ratings_total}{key.rating}</li>))}
+     
+   {data.map((key, index)=>(<li key={index}> <img src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=100"/>
+    
+      {index}{key.business_status}{key.formatted_address}{key.user_ratings_total}{key.rating}</li> ))}
+     
    </div>
-   /*<img src="https://www.google.com/search?q=butcher&sxsrf=AOaemvKB8NJDOpAOYP6xFPQYqkAnGIv0jA:1635978626469&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi5zo-nn_3zAhWaAWMBHWYdAhgQ_AUoAnoECAIQBA#imgrc=s4QU5XsTjKFR0M" width="100" height="100" alt="Logo" />*/
+   
    
    );
    
