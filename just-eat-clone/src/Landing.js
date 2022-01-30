@@ -159,61 +159,22 @@ const navbar={
 */
 <section class="hero is-success is-fullheight">
  
-  <div class="hero-head">
-    <header class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item">
-          <img src={meat} style={logo}/> <h3 style={logoText}>JustMeat</h3>
-          </a>
-          <span class="navbar-burger" data-target="navbarMenuHeroC">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenuHeroC" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active">
-              Home
-            </a>
-            <a class="navbar-item">
-              Examples
-            </a>
-            <a class="navbar-item">
-              Documentation
-            </a>
-            <span class="navbar-item">
-              <a class="button is-success is-inverted">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Sign In</span>
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </header>
-  </div>
-
- 
   <div class="hero-body">
     <div class="container has-text-centered">
     <h1 class="title is-1">Tuck into fresh meat</h1>
     <p class="subtitle is-5">Find butchers delivering right now, near you</p>
-    <form class="box">
-
     
-  <div class="field">
-  
-    <div class="control">
-      <input class="input" type="email" placeholder="Enter your postcode"/>
-    </div>
-  </div>
+    
+    <form class="landbox">
+      <div class="field">
+         <div class="control">
+             < input class="input" type="email" placeholder="Enter your postcode"/>
+          </div>
+      </div>
 
-  <button class="button is-primary">Search</button>
-</form>
+      <button class="button is-primary">Search</button>
+    </form>
+    
     </div>
   </div>
 

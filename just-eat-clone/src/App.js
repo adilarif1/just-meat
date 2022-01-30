@@ -21,24 +21,17 @@ function App(){
 
   return (
    <div className="wrapper">
-	 {/* 
-      <h1>Application</h1>
+	 
       <BrowserRouter>
         <Switch>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/Landing">
+            <Landing/>
           </Route>
-          <Route path="/preferences">
-            <Preferences />
+          <Route path="/Location">
+            <Location/>
           </Route>
         </Switch>
-   </BrowserRouter>*/}
-	  <BrowserRouter>
-                    <div>
-                    <Route path="/landing"  component={Landing} exact />
-                    <Route path="/location" component={Location}/>
-                    </div>
-                </BrowserRouter>
+   </BrowserRouter>
     </div>
   );
 }
