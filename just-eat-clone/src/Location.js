@@ -22,7 +22,7 @@ const Latlong = () => {
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(function(position) {
               
-          URL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=${position.coords.latitude},${position.coords.longitude}&radius=2000&region=us&type=cafe,bakery&key=AIzaSyBvKk7o7VYWcNVMigTsM9Hzwmv4rHmLPj0`
+          URL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=butcher&location=${position.coords.latitude},${position.coords.longitude}&radius=2000&region=us&type=cafe,bakery&key=`
           // Declare a new state variable, which we'll call "count"
         //setLat(position.coords.latitude)
         //setLong(position.coords.longitude)
